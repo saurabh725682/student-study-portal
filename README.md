@@ -47,7 +47,7 @@ The Student Study Portal is a web-based application designed to provide students
     -Read articles directly within the portal
 
 ### Technical Details
-    Backend: Python 3.x, Django 4.x
+    Backend: Python 3.x, Django 5.x
     
     Frontend: HTML5, CSS3, JavaScript
     
