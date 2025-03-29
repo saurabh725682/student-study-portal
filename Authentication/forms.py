@@ -9,8 +9,7 @@ class UserRegistrationForm(UserCreationForm):
         fields = ['username', 'password1', 'password2']
         
 
-class LoginForm(AuthenticationForm):
-   
+class LoginForm(AuthenticationForm):   
     username = forms.CharField(widget=forms.TextInput())
     password = forms.CharField(widget=forms.PasswordInput())
     
