@@ -37,7 +37,7 @@ The Student Study Portal is a web-based application designed to provide students
 
    - Get synonyms, antonyms, and example sentences
 
-    -Learn new words and expand vocabulary
+   - Learn new words and expand vocabulary
 
 ### 6. Wikipedia Search
 
