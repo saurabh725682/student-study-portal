@@ -57,7 +57,7 @@ The Student Study Portal is a web-based application designed to provide students
 
    - Unit conversion: convert between different units of measurement (e.g., length, weight)
  
-### Technical Details
+## Technical Details
   - Backend: Python 3.x, Django 5.x
     
   - Frontend: HTML5, CSS3, JavaScript
