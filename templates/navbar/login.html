@@ -1,0 +1,37 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class='container bg-white shadow-md p-5 form-layout'>
+
+  <h3>Login to your account</h3>
+
+  <hr><br>
+
+  <form method='POST' autocomplete='off'>
+
+    {% csrf_token %}
+
+    <b>
+      <p>Enter username:</p>
+    </b>
+    {{ form.username|as_crispy_field }} <br>
+
+    <p>Enter password:</p>
+    {{ form.password|as_crispy_field}} <br><br>
+
+    <button type='submit' class='btn btn-primary'>Login &nbsp; </button>
+
+  </form>
+  <br>
+
+  <div class='text-center'>
+
+    <p>Don't have an account</p> <a href="{% url 'register' %}">register</a>
+
+  </div>
+
+</div>
+
+{% endblock %}
