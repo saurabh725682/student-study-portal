@@ -6,7 +6,7 @@ from django.contrib.auth.models import auth
 
 # Create your views here.
 
-# View function for register..
+#View function for register..
 def register(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
