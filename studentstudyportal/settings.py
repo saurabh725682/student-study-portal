@@ -17,7 +17,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['studentstudyportal-smsg.onrender.com']
 
 
 # Application definition
@@ -128,6 +128,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
-
-
-AUTH_USER_MODEL = 'auth.User'
