@@ -14,6 +14,7 @@ import wikipedia as wiki
 
 def home(request):   
     return render(request, 'navbar/home.html')
+    
 
 #                                    ------------------------NOTES-------------------------
 # View function for Notes
@@ -43,6 +44,7 @@ def delete_note(request, pk=None):
 # View function for Note details..
 class NotesDetailView(generic.DetailView):
     model = Notes
+    
     
 #                               ------------------HOMEWORKS-------------------
 # View function for homework.
@@ -105,8 +107,10 @@ def update_homework(request, pk=None):
 def delete_homework(request, pk=None):   
     homework = Homework.objects.get(id=pk).delete()   
     return redirect('homework')
+    
 
 #                            -----------------YOUTUBE--------------------
+# View function for youtube.
 def youtube(request):
     if request.method == 'POST':
         form = DashboardForm(request.POST)
@@ -187,7 +191,6 @@ def todo(request):
     }
     return render(request, 'dashboard/todo.html', context)
 
-
 # View function for update todo..
 @login_required
 def update_todo(request, pk=None):
@@ -212,6 +215,7 @@ def delete_todo(request, pk=None):
 
 
 #                                 -------------------BOOKS---------------------
+# View function for books.
 def books(request):
     if request.method == 'POST':
         form = DashboardForm(request.POST)
@@ -246,6 +250,7 @@ def books(request):
 
 
 #                              -------------------DICTIONARY---------------------
+# View function for dictionary.
 def dictionary(request):
     if request.method == 'POST':
         form = DashboardForm(request.POST)
@@ -278,7 +283,8 @@ def dictionary(request):
     return render(request, 'dashboard/dictionary.html', context)
 
  
-#                              ------------------WIKIPEDIA---------------------    
+#                              -------------------WIKIPEDIA---------------------    
+# View function for wikipedia.
 def wikipedia(request):
     if request.method == 'POST':
         text = request.POST['text']
@@ -309,7 +315,8 @@ def wikipedia(request):
     return render(request, 'dashboard/wikipedia.html', context)
 
 
-#                            -------------------CONVERSION-----------------------
+#                            ---------------------CONVERSION-----------------------
+# View function for conversion.
 def conversion(request):
     if request.method == 'POST':
         form = ConversionForm(request.POST)
