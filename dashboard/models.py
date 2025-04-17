@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+# Creating model for notes..
 class Notes(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
@@ -15,7 +16,7 @@ class Notes(models.Model):
         verbose_name = "notes"
         verbose_name_plural = "notes"
 
-
+# Creating model for homework..
 class Homework(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     subject = models.CharField(max_length=50)
@@ -27,7 +28,7 @@ class Homework(models.Model):
     def __str__(self):
         return self.title
     
-    
+# Creating model for todo..
 class Todo(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=1000)
